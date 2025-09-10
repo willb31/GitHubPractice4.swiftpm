@@ -11,11 +11,16 @@ struct HeaderView: View {
     var body: some View {
         HStack {
         TextField("Add Task", text: $newTask)
+                .textFieldStyle(.roundedBorder)
+                .padding()
             
             Button("Submit") {
                 tasks.append(newTask)
                 newTask = ""
             }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
             
         }
         
