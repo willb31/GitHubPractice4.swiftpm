@@ -14,7 +14,7 @@ struct HeaderView: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
             
-            Button("Submit") {
+            Button("Add") {
                 tasks.append(Task(nameOfTask: newTask))
                 newTask = ""
             }
