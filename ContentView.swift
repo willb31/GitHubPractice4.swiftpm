@@ -7,6 +7,7 @@ struct ContentView: View {
     Task(nameOfTask: "Grocery Shop")
 ]
     var body: some View {
+        HeaderView(tasks: $tasks)
         List(tasks, id: \.self) { task in
         Text(task.nameOfTask)
         }

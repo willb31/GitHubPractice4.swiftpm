@@ -5,7 +5,7 @@ import SwiftUI
 //  Created by William J. Baik on 9/10/25.
 //
 struct HeaderView: View {
-    @Binding var tasks: [String]
+    @Binding var tasks: [Task]
     @State var newTask: String = ""
 
     var body: some View {
@@ -13,7 +13,7 @@ struct HeaderView: View {
         TextField("Add Task", text: $newTask)
             
             Button("Submit") {
-                tasks.append(newTask)
+                tasks.append(Task(nameOfTask: newTask))
                 newTask = ""
             }
             
